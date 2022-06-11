@@ -30,5 +30,6 @@ deep-copy-regex:
 - source: "/google/cloud/orchestration/airflow/service/(v.*)/.*-java/grpc-google-.*/src"
   dest: "/owl-bot-staging/$1/grpc-google-cloud-orchestration-airflow-$1/src"
 - source: "/google/cloud/orchestration/airflow/service/(v.*)/.*-java/gapic-google-.*/src"
-  dest: "/owl-bot-staging/$1/google-cloud-orchestration-airflow/src"- source: "/google/cloud/orchestration/(v.*)/.*-java/samples/snippets/generated"
+  dest: "/owl-bot-staging/$1/google-cloud-orchestration-airflow/src"
+- source: "/google/cloud/orchestration/airflow/service/(v.*)/.*-java/samples/snippets/generated"
   dest: "/owl-bot-staging/$1/samples/snippets/generated"
