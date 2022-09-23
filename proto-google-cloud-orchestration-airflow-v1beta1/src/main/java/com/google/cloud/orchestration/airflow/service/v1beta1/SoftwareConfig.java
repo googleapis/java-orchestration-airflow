@@ -317,7 +317,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean containsAirflowConfigOverrides(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetAirflowConfigOverrides().getMap().containsKey(key);
   }
@@ -381,7 +381,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   public java.lang.String getAirflowConfigOverridesOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetAirflowConfigOverrides().getMap();
@@ -413,7 +413,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public java.lang.String getAirflowConfigOverridesOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetAirflowConfigOverrides().getMap();
@@ -469,7 +469,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean containsPypiPackages(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetPypiPackages().getMap().containsKey(key);
   }
@@ -519,7 +519,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   public java.lang.String getPypiPackagesOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiPackages().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -543,7 +543,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public java.lang.String getPypiPackagesOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiPackages().getMap();
     if (!map.containsKey(key)) {
@@ -611,7 +611,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public boolean containsEnvVariables(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetEnvVariables().getMap().containsKey(key);
   }
@@ -687,7 +687,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   public java.lang.String getEnvVariablesOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetEnvVariables().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -724,7 +724,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
   @java.lang.Override
   public java.lang.String getEnvVariablesOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetEnvVariables().getMap();
     if (!map.containsKey(key)) {
@@ -1472,7 +1472,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsAirflowConfigOverrides(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetAirflowConfigOverrides().getMap().containsKey(key);
     }
@@ -1536,7 +1536,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     public java.lang.String getAirflowConfigOverridesOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetAirflowConfigOverrides().getMap();
@@ -1568,7 +1568,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public java.lang.String getAirflowConfigOverridesOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetAirflowConfigOverrides().getMap();
@@ -1607,7 +1607,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder removeAirflowConfigOverrides(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutableAirflowConfigOverrides().getMutableMap().remove(key);
       return this;
@@ -1642,11 +1642,12 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder putAirflowConfigOverrides(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutableAirflowConfigOverrides().getMutableMap().put(key, value);
       return this;
     }
@@ -1726,7 +1727,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsPypiPackages(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetPypiPackages().getMap().containsKey(key);
     }
@@ -1776,7 +1777,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     public java.lang.String getPypiPackagesOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiPackages().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1800,7 +1801,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public java.lang.String getPypiPackagesOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiPackages().getMap();
       if (!map.containsKey(key)) {
@@ -1831,7 +1832,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder removePypiPackages(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutablePypiPackages().getMutableMap().remove(key);
       return this;
@@ -1859,11 +1860,12 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder putPypiPackages(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutablePypiPackages().getMutableMap().put(key, value);
       return this;
     }
@@ -1948,7 +1950,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsEnvVariables(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetEnvVariables().getMap().containsKey(key);
     }
@@ -2024,7 +2026,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     public java.lang.String getEnvVariablesOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetEnvVariables().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2061,7 +2063,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public java.lang.String getEnvVariablesOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetEnvVariables().getMap();
       if (!map.containsKey(key)) {
@@ -2105,7 +2107,7 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder removeEnvVariables(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutableEnvVariables().getMutableMap().remove(key);
       return this;
@@ -2146,11 +2148,12 @@ public final class SoftwareConfig extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder putEnvVariables(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutableEnvVariables().getMutableMap().put(key, value);
       return this;
     }
