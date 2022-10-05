@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/googleapis/java-orchestration-airflow/compare/v1.3.5...v1.3.6) (2022-10-05)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([668990c](https://github.com/googleapis/java-orchestration-airflow/commit/668990c4e5d67a200386531f1d07ed10560c2e98))
+
 ## [1.3.5](https://github.com/googleapis/java-orchestration-airflow/compare/v1.3.4...v1.3.5) (2022-10-03)
 
 
