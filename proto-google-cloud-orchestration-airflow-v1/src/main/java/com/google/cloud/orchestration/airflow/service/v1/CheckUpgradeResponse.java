@@ -56,89 +56,6 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
     return this.unknownFields;
   }
 
-  private CheckUpgradeResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              buildLogUri_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pypiConflictBuildLogExtract_ = s;
-              break;
-            }
-          case 32:
-            {
-              int rawValue = input.readEnum();
-
-              containsPypiModulesConflict_ = rawValue;
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              imageVersion_ = s;
-              break;
-            }
-          case 50:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                pypiDependencies_ =
-                    com.google.protobuf.MapField.newMapField(
-                        PypiDependenciesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> pypiDependencies__ =
-                  input.readMessage(
-                      PypiDependenciesDefaultEntryHolder.defaultEntry.getParserForType(),
-                      extensionRegistry);
-              pypiDependencies_
-                  .getMutableMap()
-                  .put(pypiDependencies__.getKey(), pypiDependencies__.getValue());
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.cloud.orchestration.airflow.service.v1.EnvironmentsOuterClass
         .internal_static_google_cloud_orchestration_airflow_service_v1_CheckUpgradeResponse_descriptor;
@@ -561,7 +478,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public boolean containsPypiDependencies(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetPypiDependencies().getMap().containsKey(key);
   }
@@ -599,7 +516,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
   public java.lang.String getPypiDependenciesOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiDependencies().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -617,7 +534,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
   @java.lang.Override
   public java.lang.String getPypiDependenciesOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetPypiDependencies().getMap();
     if (!map.containsKey(key)) {
@@ -657,7 +574,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
     }
     com.google.protobuf.GeneratedMessageV3.serializeStringMapTo(
         output, internalGetPypiDependencies(), PypiDependenciesDefaultEntryHolder.defaultEntry, 6);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -693,7 +610,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
               .build();
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(6, pypiDependencies__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -715,7 +632,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
       return false;
     if (!getImageVersion().equals(other.getImageVersion())) return false;
     if (!internalGetPypiDependencies().equals(other.internalGetPypiDependencies())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -738,7 +655,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
       hash = (37 * hash) + PYPI_DEPENDENCIES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetPypiDependencies().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -891,17 +808,10 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
 
     // Construct using
     // com.google.cloud.orchestration.airflow.service.v1.CheckUpgradeResponse.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -1022,7 +932,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
         onChanged();
       }
       internalGetMutablePypiDependencies().mergeFrom(other.internalGetPypiDependencies());
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1037,19 +947,67 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.cloud.orchestration.airflow.service.v1.CheckUpgradeResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                buildLogUri_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 26:
+              {
+                pypiConflictBuildLogExtract_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+            case 32:
+              {
+                containsPypiModulesConflict_ = input.readEnum();
+
+                break;
+              } // case 32
+            case 42:
+              {
+                imageVersion_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+            case 50:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                    pypiDependencies__ =
+                        input.readMessage(
+                            PypiDependenciesDefaultEntryHolder.defaultEntry.getParserForType(),
+                            extensionRegistry);
+                internalGetMutablePypiDependencies()
+                    .getMutableMap()
+                    .put(pypiDependencies__.getKey(), pypiDependencies__.getValue());
+                break;
+              } // case 50
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage =
-            (com.google.cloud.orchestration.airflow.service.v1.CheckUpgradeResponse)
-                e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -1538,7 +1496,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public boolean containsPypiDependencies(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetPypiDependencies().getMap().containsKey(key);
     }
@@ -1576,7 +1534,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
     public java.lang.String getPypiDependenciesOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetPypiDependencies().getMap();
@@ -1595,7 +1553,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
     @java.lang.Override
     public java.lang.String getPypiDependenciesOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetPypiDependencies().getMap();
@@ -1621,7 +1579,7 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
      */
     public Builder removePypiDependencies(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutablePypiDependencies().getMutableMap().remove(key);
       return this;
@@ -1643,11 +1601,12 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
      */
     public Builder putPypiDependencies(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutablePypiDependencies().getMutableMap().put(key, value);
       return this;
     }
@@ -1701,7 +1660,18 @@ public final class CheckUpgradeResponse extends com.google.protobuf.GeneratedMes
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CheckUpgradeResponse(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
