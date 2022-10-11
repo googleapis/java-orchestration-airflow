@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/googleapis/java-orchestration-airflow/compare/v1.1.7...v1.1.8) (2022-10-11)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (1.1.x) ([#271](https://github.com/googleapis/java-orchestration-airflow/issues/271)) ([f02e906](https://github.com/googleapis/java-orchestration-airflow/commit/f02e9065063effc6af64674f1ffa8afca5d70c76))
+
 ### [1.1.7](https://github.com/googleapis/java-orchestration-airflow/compare/v1.1.6...v1.1.7) (2022-04-15)
 
 
