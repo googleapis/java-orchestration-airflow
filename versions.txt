@@ -1,8 +1,8 @@
 # Format:
 # module:released-version:current-version
 
-google-cloud-orchestration-airflow:1.1.8:1.1.8
-grpc-google-cloud-orchestration-airflow-v1:1.1.8:1.1.8
-grpc-google-cloud-orchestration-airflow-v1beta1:0.4.8:0.4.8
-proto-google-cloud-orchestration-airflow-v1:1.1.8:1.1.8
-proto-google-cloud-orchestration-airflow-v1beta1:0.4.8:0.4.8
+google-cloud-orchestration-airflow:1.1.8:1.1.9-SNAPSHOT
+grpc-google-cloud-orchestration-airflow-v1:1.1.8:1.1.9-SNAPSHOT
+grpc-google-cloud-orchestration-airflow-v1beta1:0.4.8:0.4.9-SNAPSHOT
+proto-google-cloud-orchestration-airflow-v1:1.1.8:1.1.9-SNAPSHOT
+proto-google-cloud-orchestration-airflow-v1beta1:0.4.8:0.4.9-SNAPSHOT
