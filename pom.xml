@@ -79,7 +79,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-orchestration-airflow-v1beta1</artifactId>
-        <version>0.6.6</version><!-- {x-version-update:grpc-google-cloud-orchestration-airflow-v1beta1:current} -->
+        <version>0.7.0</version><!-- {x-version-update:grpc-google-cloud-orchestration-airflow-v1beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
